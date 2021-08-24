@@ -28,7 +28,6 @@ SELECT ups.ReportID,
        '{{ ds }}' as insert_date
 
 FROM spectrum.user_parse_staging ups
-     JOIN spectrum.classified_party_review cpr ON ups.ReportID = cpr.UniqueID
 LEFT JOIN spectrum.classified_party_review p1 ON Spot_1 = p1.PartySpot
 LEFT JOIN spectrum.classified_party_review p2 ON Spot_2 = p2.PartySpot
 LEFT JOIN spectrum.classified_party_review p3 ON Spot_3 = p3.PartySpot
