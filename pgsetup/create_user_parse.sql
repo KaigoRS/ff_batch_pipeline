@@ -11,5 +11,5 @@ CREATE TABLE retail.user_parse (
     Server VARCHAR(20)
 );
 
-COPY retail.user_parse(zone,bossencounter,character_id,parse,date,dps,uniqueid,server) 
+COPY retail.user_parse(zone,bossencounter,characterid,parse,date,dps,uniqueid,server) 
 FROM '/input_data/ParseData.csv' DELIMITER ','  CSV HEADER;
