@@ -5,6 +5,8 @@ The repository is a stripped down batch ETL data pipeline project.
 ## Introduction
 
 The purpose of this project is to combine Apache Airflow, PySpark, Docker, and AWS (S3, EMR, and Redshift) into a data pipeline. 
+Relevant code pertaining to the DAG, PostgreSQL Server, and Redshift setup can be found in their relevant folders.
+PySpark and python code are found in the dags folder.
 
 ## Architecture Overview
 This is the general flow of the pipeline, where data from a local CSV file and a SQL database are transformed and combined.
