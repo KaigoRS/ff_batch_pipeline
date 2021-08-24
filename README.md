@@ -1,4 +1,4 @@
-# Batch DE Project - FFLOGS Group Composition Analyzer
+# Batch DE Project - FFLogs Group Composition Analyzer
 
 The repository is a stripped down batch ETL data pipeline project.
 
