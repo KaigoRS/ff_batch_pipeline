@@ -9,7 +9,7 @@ CREATE EXTERNAL TABLE spectrum.user_parse_staging (
     Parse INTEGER,
     Date TIMESTAMP,
     DPS DECIMAL(8, 3),
-    UniqueID VARCHAR(30)
+    UniqueID VARCHAR(30),
     Server VARCHAR(20)
 ) PARTITIONED BY (insert_date DATE) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS textfile LOCATION 's3://"$1"/stage/user_parse/' TABLE PROPERTIES ('skip.header.line.count' = '1');
 DROP TABLE IF EXISTS spectrum.classified_party_review;
