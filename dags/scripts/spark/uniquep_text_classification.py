@@ -5,7 +5,21 @@ import pyspark.sql.functions as F
 
 '''
 This pyspark is used to scan through the party member list and check for uniqueness and encounter clear. 
-It returns the ReportID and status of unique party composition 
+It returns the ReportID, status of unique party composition, and the class composition of the party.
+
+In total, there are 10*6*715 (42900) different possible party combinations.
+Since order does not matter in a party, but duplicates are allowed, a normal combinations calculation for nCr does not apply. 
+A combinations with repititions formula must be used, where:
+	n is number of objects in a set
+	r is length of a combination to be chosen
+	C is number of possible combinations
+	C = (n + r - 1)! / (r! * (n - 1)!)
+
+If we allow for non-distinct classes in a 2/2/4 party size of 8 there are:
+	10 tank combinations (4 tank classes and 2 tank spots per party),  
+	6 healer combinations (3 healer classes and 2 healer spots per party),
+	715 dps combinations (10 dps classes and 4 dps spots per party).
+
 '''
 
 
