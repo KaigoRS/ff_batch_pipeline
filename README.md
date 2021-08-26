@@ -21,10 +21,10 @@ Data for the CSV and Postgres Database were sourced from https://www.fflogs.com/
 ![dag](assets/images/dag.png)
 
 **Top Path**  
-1b. The top path takes data from a local CSV and loads the data into a S3 loading area.  
-1a. While this happens, the EMR steps are loaded into S3.  
-2. When the data is fully loaded into S3 and the EMR steps are uploaded, the EMR cluster runs the a PySpark script on the data.  
-3. The EMR Step Sensor now waits for the EMR steps to be complete.
+1. The top path takes data from a local CSV and loads the data into a S3 loading area.  
+2. While this happens, the EMR steps are loaded into S3.  
+3. When the data is fully loaded into S3 and the EMR steps are uploaded, the EMR cluster runs the a PySpark script on the data.  
+4. The EMR Step Sensor now waits for the EMR steps to be complete.
 
 **Bottom Path**  
 1. The bottom path uses a Postgres database run on Docker.  
