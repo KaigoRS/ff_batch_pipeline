@@ -23,7 +23,7 @@ default_args = {
     "owner": "airflow",
     "depends_on_past": True,
     "wait_for_downstream": True,
-    "start_date": datetime(2021, 5, 23),
+    "start_date": datetime(2021, 6, 23),
     "email": ["airflow@airflow.com"],
     "email_on_failure": False,
     "email_on_retry": False,
@@ -34,7 +34,7 @@ default_args = {
 dag = DAG(
     "user_behaviour",
     default_args=default_args,
-    schedule_interval="0 0 * * *",
+    schedule_interval="@daily",
     max_active_runs=1,
 )
 
